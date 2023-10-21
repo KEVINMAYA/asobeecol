@@ -16,8 +16,8 @@
 
 
 -- Volcando estructura de base de datos para asobeecol
-CREATE DATABASE IF NOT EXISTS `asobeecol` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
-USE `asobeecol`;
+CREATE DATABASE IF NOT EXISTS `bkgzijtb6ievzbbhuvzw` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+USE `bkgzijtb6ievzbbhuvzw`;
 
 -- Volcando estructura para tabla asobeecol.brigadista
 CREATE TABLE IF NOT EXISTS `brigadista` (
