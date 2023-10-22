@@ -941,72 +941,72 @@
 
 <script>
     // Datos de usuario en sesion
-    let url = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/datos/';
+    let url = 'http://containers-us-west-144.railway.app/api/datos/';
 
     //------------------------------Brigadistas-------------------------------
 
     //retorna todos los brigadistas
-    let url1 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/brigadistas/';
+    let url1 = 'http://containers-us-west-144.railway.app/api/brigadistas/';
     //cambia la contraseña del brigadista
-    let url2 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/cambiarcontrasenia/';
+    let url2 = 'http://containers-us-west-144.railway.app/api/cambiarcontrasenia/';
     //añade un nuevo brigadista
-    let url3 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/addbrigadista/';
+    let url3 = 'http://containers-us-west-144.railway.app/api/addbrigadista/';
     //edita un brigadista
-    let url4 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/editbrigadista/';
+    let url4 = 'http://containers-us-west-144.railway.app/api/editbrigadista/';
     //elimina un brigadista
-    let url5 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/deletebrigadista/';
+    let url5 = 'http://containers-us-west-144.railway.app/api/deletebrigadista/';
     //retorna todos los brigadistas que quieren cambiar contraseña
-    let url6 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/listabrigadistacambio/';
+    let url6 = 'http://containers-us-west-144.railway.app/api/listabrigadistacambio/';
     //cambia la contraseña
-    let url7 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/passwordbrigadistacambio/';
+    let url7 = 'http://containers-us-west-144.railway.app/api/passwordbrigadistacambio/';
     // da el numero de brigadistas activos e inactivos
-    let url8 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/estadobrigadistacontador/';
-    let url9 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/informeBrigadistaEmpresa/';
+    let url8 = 'http://containers-us-west-144.railway.app/api/estadobrigadistacontador/';
+    let url9 = 'http://containers-us-west-144.railway.app/api/informeBrigadistaEmpresa/';
 
     //-----------------------------------empresas------------------------------------
-    let url20 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/empresa/';
-    let url21 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/addempresa/';
-    let url22 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/editempresa/';
-    let url23 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/deleteempresa/';
-    let url24 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/searchempresa/';
+    let url20 = 'http://containers-us-west-144.railway.app/api/empresa/';
+    let url21 = 'http://containers-us-west-144.railway.app/api/addempresa/';
+    let url22 = 'http://containers-us-west-144.railway.app/api/editempresa/';
+    let url23 = 'http://containers-us-west-144.railway.app/api/deleteempresa/';
+    let url24 = 'http://containers-us-west-144.railway.app/api/searchempresa/';
 
 
     //--------------------------Profesiones---------------------------------------
-    let url30 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/profesion/';
+    let url30 = 'http://containers-us-west-144.railway.app/api/profesion/';
 
     //------------------------------Roles-----------------------------------------
-    let url40 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/rol/';
+    let url40 = 'http://containers-us-west-144.railway.app/api/rol/';
 
     //------------------------------Donaciones-----------------------------------------
-    let url50 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/donacion/';
-    let url51 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/adddonacion/';
-    let url52 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/estadodonacion/';
-    let url53 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/enviardonacionalmacen/';
-    let url54 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/entregardonacion/';
-    let url55 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/deletedonacion/';
-    let url56 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/editdonacion/';
-    let url57 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/comprobantedonacion/';
-    let url58 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/estadodonacioncontador/';
+    let url50 = 'http://containers-us-west-144.railway.app/api/donacion/';
+    let url51 = 'http://containers-us-west-144.railway.app/api/adddonacion/';
+    let url52 = 'http://containers-us-west-144.railway.app/api/estadodonacion/';
+    let url53 = 'http://containers-us-west-144.railway.app/api/enviardonacionalmacen/';
+    let url54 = 'http://containers-us-west-144.railway.app/api/entregardonacion/';
+    let url55 = 'http://containers-us-west-144.railway.app/api/deletedonacion/';
+    let url56 = 'http://containers-us-west-144.railway.app/api/editdonacion/';
+    let url57 = 'http://containers-us-west-144.railway.app/api/comprobantedonacion/';
+    let url58 = 'http://containers-us-west-144.railway.app/api/estadodonacioncontador/';
 
     //--------------------------------Cursos-----------------------------------------------
-    let url60 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/cursos/';
-    let url61 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/cursosbrigadista/';
-    let url62 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/addcursosbrigadista/';
-    let url63 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/deletecursosbrigadista/';
+    let url60 = 'http://containers-us-west-144.railway.app/api/cursos/';
+    let url61 = 'http://containers-us-west-144.railway.app/api/cursosbrigadista/';
+    let url62 = 'http://containers-us-west-144.railway.app/api/addcursosbrigadista/';
+    let url63 = 'http://containers-us-west-144.railway.app/api/deletecursosbrigadista/';
 
     //--------------------------------Dotacion-----------------------------------------------
-    let url70 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/dotacion/';
-    let url71 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/adddotacion/';
-    let url72 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/editdotacion/';
-    let url73 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/deletedotacion/';
-    let url74 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/dotacionfiltro/';
+    let url70 = 'http://containers-us-west-144.railway.app/api/dotacion/';
+    let url71 = 'http://containers-us-west-144.railway.app/api/adddotacion/';
+    let url72 = 'http://containers-us-west-144.railway.app/api/editdotacion/';
+    let url73 = 'http://containers-us-west-144.railway.app/api/deletedotacion/';
+    let url74 = 'http://containers-us-west-144.railway.app/api/dotacionfiltro/';
 
     //--------------------------Eventos---------------------------------------
-    let url80 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/eventos/';
-    let url81 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/addeventos/';
-    let url82 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/editevento/';
-    let url83 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/deleteevento/';
-    let url84 = 'http://http://bkgzijtb6ievzbbhuvzw-mysql.services.clever-cloud.com:3306/api/estadoeventoscontador/';
+    let url80 = 'http://containers-us-west-144.railway.app/api/eventos/';
+    let url81 = 'http://containers-us-west-144.railway.app/api/addeventos/';
+    let url82 = 'http://containers-us-west-144.railway.app/api/editevento/';
+    let url83 = 'http://containers-us-west-144.railway.app/api/deleteevento/';
+    let url84 = 'http://containers-us-west-144.railway.app/api/estadoeventoscontador/';
 
 
 
