@@ -99,7 +99,7 @@ app.get("/brigada", c.isAuthenticated, (req, res) => {
 
  
  
-//------------------------------------------ Gestión de brigadistas de railway ------------------------------------------
+//------------------------------------------ Gestión de brigadistas de bqrj92bvm5sd5syrruv6 ------------------------------------------
  
   // Función para mostrar brigadista en sesion
   app.get("/api/datos/",(req,res)=>{
@@ -118,7 +118,7 @@ app.get("/brigada", c.isAuthenticated, (req, res) => {
     });
 
 
-// Función para mostrar todos los brigadistas de railway
+// Función para mostrar todos los brigadistas de bqrj92bvm5sd5syrruv6
 app.get("/api/brigadistas",(req,res)=>{
   conexion.query("SELECT * FROM vbrigadista ORDER BY vbrigadista.fechaInicio DESC", (error, filas) => {
     //Si existe un error nos devuelve el error detectado
@@ -148,7 +148,7 @@ app.get("/api/searchbrigadista/:idBrigadista",(req,res)=>{
   });
 
 
-  // Función para mostrar todos los brigadistas de railway por rol
+  // Función para mostrar todos los brigadistas de bqrj92bvm5sd5syrruv6 por rol
 app.get("/api/brigadistas/:rol/:empresa",(req,res)=>{
   const rol = req.params.rol;
   const empresa = req.params.empresa;
@@ -171,7 +171,7 @@ app.get("/api/brigadistas/:rol/:empresa",(req,res)=>{
   
   });
 
-      // Función para mostrar todos los brigadistas de railway por rol
+      // Función para mostrar todos los brigadistas de bqrj92bvm5sd5syrruv6 por rol
 app.get("/api/estadobrigadistacontador",(req,res)=>{//Variable que almacena la sentencia sql para su posterior consulta
   let sql = "SELECT brigadista.estado, COUNT(brigadista.estado) AS cantidad FROM brigadista  GROUP BY brigadista.estado ORDER BY  brigadista.estado asc";
   //Inserción a la base de datos usando la sentencia sql con los atributos que vienen por parámetro
@@ -186,7 +186,7 @@ app.get("/api/estadobrigadistacontador",(req,res)=>{//Variable que almacena la s
   
   });
 
-    // Función para mostrar todos los brigadistas de railway por rol
+    // Función para mostrar todos los brigadistas de bqrj92bvm5sd5syrruv6 por rol
 app.get("/api/listabrigadistacambio/:rol/:empresa",(req,res)=>{
   const rol = req.params.rol;
   const empresa = req.params.empresa;
@@ -373,7 +373,7 @@ app.get("/api/eventos",(req,res)=>{
   });
 
 
-            // Función para mostrar contador de donacion de railway 
+            // Función para mostrar contador de donacion de bqrj92bvm5sd5syrruv6 
 app.get("/api/estadoeventoscontador",(req,res)=>{//Variable que almacena la sentencia sql para su posterior consulta
   let sql = "SELECT  CASE WHEN fechaFin < CURDATE() THEN 'Pasado' WHEN fechaInicio <= CURDATE() AND  fechaFin >= CURDATE() THEN 'En curso'  ELSE 'Próximo' END AS estado, COUNT(*) AS contador FROM eventos GROUP BY  estado ORDER BY estado desc";
   //Inserción a la base de datos usando la sentencia sql con los atributos que vienen por parámetro
@@ -469,10 +469,10 @@ app.post("/api/cambiarcontrasenia/:password/:id_brigadista", (req, res) => {
   });
 
 //--------------------------------------Empresas------------------------------------------------------------
-// Función para mostrar todas las empresas de railway
+// Función para mostrar todas las empresas de bqrj92bvm5sd5syrruv6
 app.get("/api/empresa",(req,res)=>{
   //Consulta a la base de datos usando la sentencia sql que viene por parámetro
-  conexion.query("SELECT * FROM railway.empresa", (error, filas) => {
+  conexion.query("SELECT * FROM bqrj92bvm5sd5syrruv6.empresa", (error, filas) => {
     //Si existe un error nos devuelve el error detectado
     if (error) {
       //Excepción con el error detectado
@@ -488,7 +488,7 @@ app.get("/api/empresa",(req,res)=>{
 // Función para mostrar una empresa por id
 app.get("/api/searchempresa/:idEmpresa",(req,res)=>{
   //Consulta a la base de datos usando la sentencia sql que viene por parámetro
-  conexion.query("SELECT * FROM railway.empresa where idEmpresa = ?",[req.params.idEmpresa],function (error, filas){
+  conexion.query("SELECT * FROM bqrj92bvm5sd5syrruv6.empresa where idEmpresa = ?",[req.params.idEmpresa],function (error, filas){
     //Si existe un error nos devuelve el error detectado
     if (error) {
       //Excepción con el error detectado
@@ -551,7 +551,7 @@ app.post("/api/addempresa/:nit/:nombre/:tipo/:celular/:pais/:departamento/:ciuda
 // Función para mostrar todas los departamentos
 app.get("/api/departamentos",(req,res)=>{
   //Consulta a la base de datos usando la sentencia sql que viene por parámetro
-  conexion.query("SELECT * FROM railway.departamentos ORDER BY departamento", (error, filas) => {
+  conexion.query("SELECT * FROM bqrj92bvm5sd5syrruv6.departamentos ORDER BY departamento", (error, filas) => {
     //Si existe un error nos devuelve el error detectado
     if (error) {
       //Excepción con el error detectado
@@ -569,7 +569,7 @@ app.get("/api/departamentos",(req,res)=>{
   // Función para mostrar una empresa por id
 app.get("/api/municipios/:idDepartamento",(req,res)=>{
   //Consulta a la base de datos usando la sentencia sql que viene por parámetro
-  conexion.query("SELECT * FROM railway.municipios WHERE departamento_id= ?  ORDER BY municipio",[req.params.idDepartamento],function (error, filas){
+  conexion.query("SELECT * FROM bqrj92bvm5sd5syrruv6.municipios WHERE departamento_id= ?  ORDER BY municipio",[req.params.idDepartamento],function (error, filas){
     //Si existe un error nos devuelve el error detectado
     if (error) {
       //Excepción con el error detectado
@@ -584,10 +584,10 @@ app.get("/api/municipios/:idDepartamento",(req,res)=>{
 
 //-----------------------------------Profesiones--------------------------------------------------------
 
-// Función para mostrar todas las profesiones de railway
+// Función para mostrar todas las profesiones de bqrj92bvm5sd5syrruv6
 app.get("/api/profesion",(req,res)=>{
   //Consulta a la base de datos usando la sentencia sql que viene por parámetro
-  conexion.query("SELECT * FROM railway.profesion", (error, filas) => {
+  conexion.query("SELECT * FROM bqrj92bvm5sd5syrruv6.profesion", (error, filas) => {
     //Si existe un error nos devuelve el error detectado
     if (error) {
       //Excepción con el error detectado
@@ -604,10 +604,10 @@ app.get("/api/profesion",(req,res)=>{
 
 
   //--------------------------------------Roles----------------------------------------------------------------
-  // Función para mostrar todos los roles de railway
+  // Función para mostrar todos los roles de bqrj92bvm5sd5syrruv6
 app.get("/api/rol",(req,res)=>{
   //Consulta a la base de datos usando la sentencia sql que viene por parámetro
-  conexion.query("SELECT * FROM railway.rol", (error, filas) => {
+  conexion.query("SELECT * FROM bqrj92bvm5sd5syrruv6.rol", (error, filas) => {
     //Si existe un error nos devuelve el error detectado
     if (error) {
       //Excepción con el error detectado
@@ -621,7 +621,7 @@ app.get("/api/rol",(req,res)=>{
   });
 
   //--------------------------------------Donaciones----------------------------------------------------------------
-  // Función para mostrar todos las donaciones realizadas a railway
+  // Función para mostrar todos las donaciones realizadas a bqrj92bvm5sd5syrruv6
   app.get("/api/donacion",(req,res)=>{
     //Consulta a la base de datos usando la sentencia sql que viene por parámetro
     conexion.query("SELECT * FROM vdonacion", (error, filas) => {
@@ -637,7 +637,7 @@ app.get("/api/rol",(req,res)=>{
     
     });
 
-          // Función para mostrar contador de donacion de railway 
+          // Función para mostrar contador de donacion de bqrj92bvm5sd5syrruv6 
 app.get("/api/estadodonacioncontador",(req,res)=>{//Variable que almacena la sentencia sql para su posterior consulta
   let sql = "SELECT donacion.estado, COUNT(donacion.estado) AS cantidad FROM donacion  GROUP BY donacion.estado ORDER BY  donacion.estado asc";
   //Inserción a la base de datos usando la sentencia sql con los atributos que vienen por parámetro
@@ -698,7 +698,7 @@ app.post("/api/adddonacion/:nombreDonante/:documentoDonante/:celularDonante/:pai
         });
       });
 
-// Función para mostrar todos las donaciones realizadas a railway filtradas por estado
+// Función para mostrar todos las donaciones realizadas a bqrj92bvm5sd5syrruv6 filtradas por estado
 app.get("/api/estadodonacion/:estado",(req,res)=>{
   //Consulta a la base de datos usando la sentencia sql que viene por parámetro
   conexion.query("SELECT * FROM vdonacion WHERE estado = ?",[req.params.estado], function (error, filas) {
@@ -765,7 +765,7 @@ app.post("/api/enviardonacionalmacen/:almacen/:id", (req, res) => {
     
 
 //---------------------------------------- Dotaciones ----------------------------------------
-// Función para mostrar todos las donaciones realizadas a railway filtradas por estado
+// Función para mostrar todos las donaciones realizadas a bqrj92bvm5sd5syrruv6 filtradas por estado
 app.get("/api/dotacion",(req,res)=>{
   //Consulta a la base de datos usando la sentencia sql que viene por parámetro
   conexion.query("SELECT * FROM vdotacion", function (error, filas) {
@@ -781,7 +781,7 @@ app.get("/api/dotacion",(req,res)=>{
   
   });
 
-    // Función para mostrar todos los brigadistas de railway por rol
+    // Función para mostrar todos los brigadistas de bqrj92bvm5sd5syrruv6 por rol
 app.get("/api/dotacion/:rol/:empresa",(req,res)=>{
   const rol = req.params.rol;
   const empresa = req.params.empresa;
@@ -1042,7 +1042,7 @@ app.get("/api/informeDonacionTipo",(req,res)=>{
     
     });
 
-// Función para mostrar todos las donaciones realizadas a railway filtradas por estado
+// Función para mostrar todos las donaciones realizadas a bqrj92bvm5sd5syrruv6 filtradas por estado
 app.get("/api/informeDotacionCantidadTipo/:tipo",(req,res)=>{
   //Consulta a la base de datos usando la sentencia sql que viene por parámetro
   conexion.query("SELECT nombreEmpresa, COUNT(idDotacion) AS cantidad FROM vdotacion WHERE tipo=? GROUP BY nombreEmpresa ORDER BY nombreEmpresa ",[req.params.tipo], function (error, filas) {
